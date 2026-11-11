@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!-- DOCTYPE declares HTML5. lang sets the page language. -->
+<html lang="en">
+<head>
+    <!-- The head contains settings, the browser-tab title, and CSS. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0%;
+            box-sizing:border-box;
+            text-decoration: dotted;
+            scroll-behavior: smooth;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+         
+        html {
+            font-size: 20px;
+            overflow-x: hidden;
+        }
+        body{
+            background-color: rgb(12, 11, 11);
+            
+        }
+        header{
+            position:initial;
+            width: 100%;
+            top: 0%;
+            left:0%;
+            padding: 30px;
+            background:rgb(1, 34, 29);
+            display:flex;
+            justify-content:space-between;
+            align-items: center;  
+
+        }
+
+        .logo{
+            font-size: 40px;
+            color: rgb(156, 245, 83);
+            cursor: pointer;
+            transition-duration: 5s;
+        }
+        .logo :hover{
+            transform: rotate(3);
+            
+        }
+        .navbar a{
+            font-size: 17px;
+            color: aliceblue;
+            margin-left: 2rem;
+            border-bottom: 3px;
+        }
+        .navbar :hover{
+            color: brown;
+        }
+
+        .gradient-btn {
+            color: rgb(5, 4, 4);
+            padding:10px;
+            border-radius: 1rem;
+            background-blend-mode: darken;
+        }
+
+        section{
+            min-height: 100vh;
+            padding: 5rem 12%;
+        }
+
+        .home{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 19px;
+        }
+
+        .home-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+        
+        }
+
+        .home-content h1{
+            color: antiquewhite;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 70;
+            margin-top: 5rem;
+            line-height: 1.2;
+        }
+
+        .home-content h3{
+            color: rgb(159, 250, 75);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 1pt;
+            font-size: 20px;
+
+        }
+
+         .home-content p{
+            color: rgb(222, 245, 161);
+            font-size: 15px;
+            font-weight: 30;
+            line-height: 1.3;
+        }
+
+        .home-img img{
+            width: 25vw;
+            border-radius: 100%;
+            
+        }
+        .about{
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items:center ;
+            text-align: center;
+            gap: 1px;
+            background-color: rgb(22, 22, 22);
+            color: rgb(186, 250, 113);
+        }
+        .about h1{
+            font-size: 90px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .education h1 {
+            font-size: 60px;
+            color: chartreuse;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            
+            justify-content: centre;
+            border-collapse:separate; 
+            border-style:dashed;
+            border-radius: 15px;
+            background-color: #f1fa73;
+            row-gap: 30px;
+        }
+
+        th, td {
+            border: 3px solid #080808;
+            padding: 40px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #a6f8ea9c;
+            font-size: 30px;
+        }
+
+    .clubs h1 {
+        font-size: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        text-shadow:#1b1b1a;
+        color: #1b1b1a;
+        background-color: rgb(156, 255, 7);
+    }
+
+    .flex-container{
+        background-color: #175200;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 190px;
+        align-items: center;
+        justify-content: center;
+        color: rgb(17, 17, 17);
+    }
+    .boss{
+        background-color: rgb(16, 46, 13);
+        color: rgb(250, 241, 241);
+        gap: 30px;
+        padding: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        border-color: black;
+    }
+    .projects{
+        background-color: #d4e068;
+        font-size: 25PX;
+
+    }
+
+    .projects h1 {
+        font-size: 100px;
+        color: rgb(128, 255, 0);
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .project-box{
+        display:grid;
+        border-radius: 10px;
+        place-items: center;
+        gap: 100px;
+        margin: 30px;
+        
+    }
+
+    .project-card{
+        display: flex;
+        flex-direction: row;
+        padding: 100px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #455e3b;
+        border-color: #080808;
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .project-card img{
+        max-width: 270px;
+        border-radius: 10px;
+       
+        
+    }
+    
+
+    .project-card h3{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 40px;
+     text-align: center;
+     color: #dcf02c;
+    }
+
+    .contact{
+        background-color: #e1e6df;
+        font-size: 18px;
+    }
+
+    .contact h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 110px;
+        text-align: center;
+        color: #98f503;
+    }
+    .footer{
+        background-color: #175200;
+        color: #e1e6df;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+
+    }
+
+    </style>
+</head>
+<body>
+   <header class="header">
+    <a href="#home" class="logo"> PROFILE PAGE </a>
+    <nav class="navbar">
+       <a href="#home"> home </a>
+       <a href="#about us">about us  </a>
+       <a href="#education"> education </a>
+       <a href="#clubs "> clubs </a>
+       <a href="#projects "> projects </a>
+       <a href="#contact "> contact  </a>
+    </nav>
+    <button class="gradient-btn">contact me</button>
+   </header>
+
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h1>hi it's <span>ADITIIEIE</span></h1>
+        <H3>
+         im a student persuing bsc CSDS.
+        </H3>
+        
+    </div>
+
+   
+    <div class="home-img">
+        <img src="profilephoto.jpeg" alt="profilephoto">
+    </div>
+
+</section>
+
+
+<section class="about us" id="about us">
+    <div class="about-content">
+        <h1>ABOUT ME</h1>
+        <p>
+            <p>Hey everyone! I'm Aditi Mandal, currently pursuing B.Sc. in Data Science and Computer Science
+                <br> at Christ University.
+            <br> I'm a curious and ambitious person who loves exploring new ideas and<br>
+             learning new things.
+            <br> I have a keen interest in technology, artificial intelligence, <br>
+            and how they can shape the future. </p>
+        </p>
+    </div>
+</section> 
+
+<section class="education" id="education">
+    <div class="education">
+        <h1> MY EDUCATION QUALIFICATIONS</h1>
+
+         <table>
+            <tr>
+              <th scope="row"> GRADE </th>
+              <th scope="row"> INSTITUTE </th>
+              <th scope="row"> PERCENTAGE </th>
+              
+            </tr>
+          
+            <tr>
+              <td>10th</td>
+              <td>St Joseph's Coed School</td>
+              <td>95%</td>
+            </tr>
+            <tr>
+              <td>12th</td>
+              <td>DPS </td>
+              <td>90%</td>      
+            </tr>
+
+            <TR>
+                <td>collage</td>
+                <td>Christ uni Pune</td>
+                <td>--</td>
+            </TR>
+          </table>
+    </div>
+
+</section>
+
+<section class="clubs" id="clubs">
+    <div class="clubs">
+        <h1> CLUBS IM PART OF...</h1>
+         <div class="flex-container">
+            <div class="boss"> NCC</div>
+            <div class="boss">DEBATE SOCIETY</div>
+            <div class="boss"> FASHION </div>
+            </div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <h1>PROJECTS</h1>
+    <div class="projectbox">
+        <div class="project-card">
+           
+            <img src="forest.jpg" alt="picture">
+             <h3> FORESTIFY</h3>
+            <p>Its an website basically for reusing the waste and sustainable development.<BR> <a href="https://github.com/mandaladiti24-arch/Forestify">veiw MORE</a></p>
+        </div>
+<br><br><br>
+        <div class="project-card">
+            
+            <img src="website.jpg" alt="webpic">
+            <h3> SMART_STUDY</h3>
+            <p>Its an website for students for their learning .<br><a href="https://github.com/mandaladiti24-arch/nature-website">VIEW MORE</a></p>
+            
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <h1>Contact <span>Me</span></h1>
+    <p>you can visit my  <a href="https://www.instagram.com/">INSTA</a></p>
+    <BR><p>you can visi my <a href="https://www.linkedin.com/feed/"> LINKEDIN</a></p>
+    <Br><P>for visiting the sites you can also checkout <a href="https://github.com/mandaladiti24-arch">MY GITHUB </a></P>
+ <br><p> contact number :7089856932</p>
+ <br><p>email: mandal.aditi24@gmail.com</p>
+
+    </section>
+    
+    
+        <footer class="footer">
+        <p class="copyright">    <br> @aditi mandal | All Rights Reserverd</p>
+    </footer>
+
+</body>
+</html>
